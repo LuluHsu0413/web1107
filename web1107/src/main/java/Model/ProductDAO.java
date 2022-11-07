@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import com.mysql.cj.jdbc.Driver;
 
 public class ProductDAO {
-	String url="jdbc:mysql://localhost:3306/classimodels";
+	public ArrayList getProductList() {
+	String url="jdbc:mysql://localhost:3306/classicmodels?useUnicode=true&characterEncoding=utf-8";
 	String user="root";	
 	String password="1234";
 	Connection conn = null;
@@ -35,8 +36,8 @@ public class ProductDAO {
         conn.close();
     } catch (Exception e) {
         System.out.println(e.getMessage());
-    }
-    return list;
+    }	
+    return a;    
 }
 }
 
